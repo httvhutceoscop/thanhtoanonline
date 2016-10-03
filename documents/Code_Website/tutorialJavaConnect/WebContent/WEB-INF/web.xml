@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID">
+	<display-name>tutorialJavaConnect</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	 <context-param>
+    <param-name>MERCHANT_CODE</param-name>
+    <param-value>PAYGATE</param-value>
+  </context-param>
+  <context-param>
+    <param-name>MERCHANT_SECURITY_KEY</param-name>
+    <param-value>487eea192e6748b4eb06fed0a8eaec5d</param-value>
+  </context-param>
+  <context-param>
+    <param-name>MERCHANT_URL_DONE</param-name>
+    <param-value>http://117.103.192.45:8005/Merchant/done.jsp</param-value>
+  </context-param>
+  <context-param>
+    <param-name>VTC_PAYGATE_URL</param-name>
+    <!-- <param-value>http://localhost:82/</param-value>  -->
+    <param-value>http://sandbox1.vtcebank.vn/pay.vtc.vn/gate/checkout.html</param-value>
+  </context-param>
+  <context-param>
+    <param-name>PAYGATE_PUBLIC_KEY</param-name>
+    <param-value>paygate_public.der</param-value>
+  </context-param>	
+  <context-param>
+    <param-name>PAYGATE_PRIVATE_KEY</param-name>
+    <param-value>paygate_private.der</param-value>
+  </context-param>
+</web-app>
