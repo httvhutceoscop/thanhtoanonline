@@ -1,6 +1,5 @@
 <?php
-
-include "functions.php";
+require_once "functions.php";
 
 $customer_name     = '';
 $email             = '';
@@ -23,6 +22,12 @@ $msg_payment_type  = '';
 $msg_bank_type     = '';
 
 $confirmStep       = false;
+
+//tooltip
+$tt_name = 'Vui lòng nhập tên không có dấu.';
+$tt_email = 'Vui lòng nhập đúng địa chỉ email.';
+$tt_phone = 'Vui lòng nhập đúng số điện thoại.';
+$tt_total = 'Số tiền chỉ bao gồm chữ số không chứa khoảng trắng và các ký tự khác.';
 
 
 if ($_POST) {
@@ -90,6 +95,18 @@ if ($_POST) {
         $bookingid         = $_POST['bookingid'];
         $token             = $_POST['token'];
 
+        //TODO: set session for infomation
+        $_SESSION['customer_name'] = $customer_name;
+        $_SESSION['customer_email'] = $customer_email;
+        $_SESSION['customer_phone'] = $customer_phone;
+        $_SESSION['payment_type'] = $payment_type;
+        $_SESSION['payment_card_name'] = $payment_card_name;
+        $_SESSION['payment_bank_name'] = $payment_bank_name;
+        $_SESSION['total'] = $total;
+        $_SESSION['customer_note'] = $customer_note;
+        $_SESSION['bookingid'] = $bookingid;
+        $_SESSION['token'] = $token;
+
         include 'vendor/libpayment.php';
         $libpayvtc = new libpay();
         /* 
@@ -103,20 +120,21 @@ if ($_POST) {
             $secret_key         : Key doi tac tao trên website khi dang ky dich vu 
             $vtcpay_url         : Url url doi tac call vao  VTCPAY "http://sandbox1.vtcebank.vn/pay.vtc.vn/gate/checkout.html" (test)
         */           
-        $return_url       = "http://localhost/thanhtoanonline/ket-qua-thanh-toan.php";
-        $receiver         = "0904128163";
+        $return_url       = getBaseUrl()."/ket-qua-thanh-toan.php";
+        $receiver         = "0983666999"; //"0904128163";
         $transaction_info = "Thanh toán vé máy bay";
-        $order_code       = strtotime("now");
+        $order_code       = "127";//strtotime("now");
         $amount           = $total;
         $customer_mobile  = $customer_phone;
-        $websiteid        = 1935;
-        $secret_key       = "BaoTam!@#$%^&*()1234567890";
-        //$vtcpay_url       = "http://sandbox1.vtcebank.vn/pay.vtc.vn/gate/checkout.html";
-        $vtcpay_url       = "https://pay.vtc.vn/cong-thanh-toan/checkout.html";
+        $websiteid        = 637; //1935;
+        $secret_key       = "NguyenThanhTrung68";//"BaoTam!@#$%^&*()1234567890";
+        $vtcpay_url       = "http://sandbox1.vtcebank.vn/pay.vtc.vn/gate/checkout.html";
+        // $vtcpay_url       = "https://pay.vtc.vn/cong-thanh-toan/checkout.html";
         $url              = $libpayvtc->buildCheckoutUrl($return_url, $receiver, $transaction_info, $order_code, $amount, $customer_mobile, $websiteid, $secret_key, $vtcpay_url, '');
                             //($return_url,  $receiver, $transaction_info, $order_code, $amount,$customer_mobile,$websiteid,$secret_key,$vtcpay_url,$param_extend)                  
         //var_dump($url);die;
-        header("Location:".$url);
+        header("Location:".$return_url);
+        // header("Location:".$url);
     }
 }
 
@@ -134,54 +152,7 @@ $aMsgInvalid = [
 ?>
 
 
-<!DOCTYPE html>
-<!-- saved from url=(0033)https://thanhtoan.sanvemaybay.vn/ -->
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/favicon.ico">
-    <title>Thanh toán vé máy bay Liên Việt</title>
-    <meta name="description" content="Thanh toán vé máy bay online, chấp nhận thẻ atm nội địa và visa, master card.">
-    <meta name="keywords" content="san ve may bay, thanh toán vé máy bay, thẻ atm nội địa, thẻ visa, master card">
-    <!--    <script src="https://apis.google.com/js/platform.js" async defer></script>-->
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <style>
-        #top-menu {
-            width: 100% !important;
-            margin: auto;
-            text-align: center;
-        }
-
-        #bankInfo {
-            display: none;
-        }
-
-        h2.titleBlock {
-            font-weight: normal;
-            font-size: 1em;
-            text-transform: uppercase;
-            border-bottom: 1px dotted #cecece;
-        }
-    </style>
-    <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript"> //<![CDATA[
-        var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.comodo.com/" : "http://www.trustlogo.com/");
-        document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-        //]]>
-    </script>
-    <script src="js/trustlogo.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-
-    <style type="text/css" media="screen">#comodoTL {
-            display: block;
-            font-size: 8px;
-            padding-left: 18px;
-        }</style>
-</head>
-<body>
 
 <?php include_once "header.php";?>
 
@@ -200,7 +171,8 @@ $aMsgInvalid = [
             <div class="form-row form-input-name-row">
                 <label>
                     <span>Họ tên<strong class="required-field">*</strong></span>
-                    <input type="text" name="customer_name" value="<?= $customer_name ?>">
+                    <input data-toggle="tooltip" data-placement="top" title="<?= $tt_name;?>" type="text" 
+                            name="customer_name" value="<?= $customer_name ?>">
                 </label>
                 <span class="form-invalid-data-info"><?= $aMsgInvalid['customer_name']; ?></span>
 
@@ -209,7 +181,8 @@ $aMsgInvalid = [
             <div class="form-row form-input-email-row">
                 <label>
                     <span>Email<strong class="required-field">*</strong></span>
-                    <input type="text" name="email" value="<?= $email ?>">
+                    <input data-toggle="tooltip" data-placement="top" title="<?= $tt_email;?>" type="text" 
+                            name="email" value="<?= $email ?>">
                 </label>
                 <span class="form-invalid-data-info"><?= $aMsgInvalid['email']; ?></span>
             </div>
@@ -218,7 +191,8 @@ $aMsgInvalid = [
 
                 <label>
                     <span>Số điện thoại<strong class="required-field">*</strong></span>
-                    <input type="text" name="phone" value="<?= $phone ?>">
+                    <input data-toggle="tooltip" data-placement="top" title="<?= $tt_phone;?>" type="text" 
+                            name="phone" value="<?= $phone ?>">
                 </label>
                 <span class="form-invalid-data-info"><?= $aMsgInvalid['phone']; ?></span>
 
@@ -242,7 +216,8 @@ $aMsgInvalid = [
 
                 <label>
                     <span>Số tiền <small>(VNĐ)<strong class="required-field">*</strong></small></span>
-                    <input type="text" name="total" value="<?= $total ?>">
+                    <input data-toggle="tooltip" data-placement="top" title="<?= $tt_total;?>" type="text" 
+                            name="total" value="<?= $total ?>">
                 </label>
                 <span class="form-invalid-data-info"><?= $aMsgInvalid['total']; ?></span>
 
@@ -416,6 +391,3 @@ $aMsgInvalid = [
 </div>
 
 <?php include_once "footer.php";?>
-
-</body>
-</html>

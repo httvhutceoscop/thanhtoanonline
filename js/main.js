@@ -111,6 +111,11 @@ $(document).ready(function(){
 
 
 
+    // For tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+
+
+
     $(".menu-item").click(function (e) {
             e.preventDefault();
             $(this).addClass("current-menu-item").siblings().removeClass("current-menu-item");

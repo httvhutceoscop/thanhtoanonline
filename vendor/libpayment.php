@@ -71,7 +71,7 @@
         
         public function verifyPaymentUrl($status, $order_code, $amount, $website_id, $sign)
     	{
-    		$secret_key = "BaoTam!@#$%^&*()1234567890";
+    		$secret_key = "NguyenThanhTrung68";//"BaoTam!@#$%^&*()1234567890";
             $a = [$status, $website_id, $order_code, $amount, $secret_key];
     		$plaintext = implode("-", $a);
     		//print $plaintext;
