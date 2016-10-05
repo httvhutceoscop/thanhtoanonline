@@ -1,5 +1,5 @@
+<?php session_start(); ?>
 <?php
-
 require_once "functions.php";
 
 $customer_name = isset($_SESSION['customer_name']) ? $_SESSION['customer_name'] : '';
@@ -12,17 +12,6 @@ $total = isset($_SESSION['total']) ? $_SESSION['total'] : '';
 $customer_note = isset($_SESSION['customer_note']) ? $_SESSION['customer_note'] : '';
 $bookingid = isset($_SESSION['bookingid']) ? $_SESSION['bookingid'] : '';
 $token = isset($_SESSION['token']) ? $_SESSION['token'] : '';
-
-var_dump($customer_name,
-$customer_email,
-$customer_phone,
-$payment_type,
-$payment_card_name,
-$payment_bank_name,
-$total,
-$customer_note,
-$bookingid,
-$token);
 
 $success = false;
 
@@ -65,12 +54,6 @@ if(isset($_GET['status']) && !empty($_GET['status']))
     }
 }
 ?>
-<?php if ($success) {?>
-<script>
-    $('.main-content').find('input, textarea, button, select').attr('disabled','disabled');
-    $('.main-content').find('#btnSubmit').hide();
-</script>
-<?php }?>
 
 <?php include_once "header.php"; ?>
 
@@ -79,7 +62,7 @@ if(isset($_GET['status']) && !empty($_GET['status']))
     <div id="vtcTab" class="tabContent retry_pay">
         <h2 class="tabTitle">Kết quả thanh toán</h2>
         <span class="red"> <?= $msg; ?></span><br/><br/>
-        <form action="http://localhost/thanhtoanonline/" method="POST">
+        <form action="<?= getBaseUrl();?>" method="POST">
             <div id="confirmStep" class="">
                 <div class="form-row">
                     <label>
@@ -198,5 +181,12 @@ if(isset($_GET['status']) && !empty($_GET['status']))
     <?php include_once "tabs/payatoffice.php";?>
     <?php include_once "tabs/payathome.php";?>
 </div>
+
+<?php if ($success) {?>
+<script>
+    $('.main-content').find('input, textarea, button, select').attr('disabled','disabled');
+    $('.main-content').find('#btnSubmit').hide();
+</script>
+<?php }?>
 
 <?php include_once "footer.php"; ?>

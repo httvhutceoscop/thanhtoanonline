@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 require_once "functions.php";
 
@@ -96,16 +97,16 @@ if ($_POST) {
         $token             = $_POST['token'];
 
         //TODO: set session for infomation
-        $_SESSION['customer_name'] = $customer_name;
-        $_SESSION['customer_email'] = $customer_email;
-        $_SESSION['customer_phone'] = $customer_phone;
-        $_SESSION['payment_type'] = $payment_type;
+        $_SESSION['customer_name']     = $customer_name;
+        $_SESSION['customer_email']    = $customer_email;
+        $_SESSION['customer_phone']    = $customer_phone;
+        $_SESSION['payment_type']      = $payment_type;
         $_SESSION['payment_card_name'] = $payment_card_name;
         $_SESSION['payment_bank_name'] = $payment_bank_name;
-        $_SESSION['total'] = $total;
-        $_SESSION['customer_note'] = $customer_note;
-        $_SESSION['bookingid'] = $bookingid;
-        $_SESSION['token'] = $token;
+        $_SESSION['total']             = $total;
+        $_SESSION['customer_note']     = $customer_note;
+        $_SESSION['bookingid']         = $bookingid;
+        $_SESSION['token']             = $token;
 
         include 'vendor/libpayment.php';
         $libpayvtc = new libpay();
@@ -132,9 +133,10 @@ if ($_POST) {
         // $vtcpay_url       = "https://pay.vtc.vn/cong-thanh-toan/checkout.html";
         $url              = $libpayvtc->buildCheckoutUrl($return_url, $receiver, $transaction_info, $order_code, $amount, $customer_mobile, $websiteid, $secret_key, $vtcpay_url, '');
                             //($return_url,  $receiver, $transaction_info, $order_code, $amount,$customer_mobile,$websiteid,$secret_key,$vtcpay_url,$param_extend)                  
+        $url = urldecode($url);
         //var_dump($url);die;
-        header("Location:".$return_url);
-        // header("Location:".$url);
+        //header("Location:".$return_url);
+        header("Location:".$url);
     }
 }
 
