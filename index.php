@@ -27,7 +27,7 @@ $confirmStep       = false;
 //tooltip
 $tt_name = 'Vui lòng nhập tên không có dấu.';
 $tt_email = 'Vui lòng nhập đúng địa chỉ email.';
-$tt_phone = 'Vui lòng nhập đúng số điện thoại.';
+$tt_phone = 'Vui lòng nhập đúng số điện thoại. Bắt dầu bằng số 0 hoặc +84';
 $tt_total = 'Số tiền chỉ bao gồm chữ số không chứa khoảng trắng và các ký tự khác.';
 
 
@@ -80,6 +80,21 @@ if ($_POST) {
         if (empty($msg_customer_name) && empty($msg_email) && empty($msg_phone) && empty($msg_total) 
             && empty($msg_payment_type) && empty($msg_bank_type)) {
             $confirmStep = true;
+
+            $paymentName = '';
+            $paymentMethod = '';
+            if ($payment_type == 'Visa') {
+                $paymentName = $payment_card_name;
+                $paymentMethod = 'THANH TOÁN BẰNG THẺ QUỐC TẾ';
+            } else if ($payment_type == 'Bank') {
+                $paymentName = $payment_bank_name;
+                $paymentMethod = 'CHUYỂN TIỀN QUA NGÂN HÀNG';
+            } else {
+                $paymentName = 'VTCPay';
+                $paymentMethod = 'TÀI KHOẢN VÍ ĐIỆN TỬ ';
+            }
+            sendEmail('order number', $customer_name, $email, $phone, $total, $paymentMethod, $paymentName, $note);
+            //sendEmail($orderNumber, $fullName, $email, $amount, $paymentMethod, $paymentName, $remarks = '')
         }
     }
 
