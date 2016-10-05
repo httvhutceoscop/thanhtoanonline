@@ -136,16 +136,25 @@ if ($_POST) {
             $secret_key         : Key doi tac tao trên website khi dang ky dich vu 
             $vtcpay_url         : Url url doi tac call vao  VTCPAY "http://sandbox1.vtcebank.vn/pay.vtc.vn/gate/checkout.html" (test)
         */           
+        // $return_url       = getBaseUrl()."/ket-qua-thanh-toan.php";
+        // $receiver         = "0983666999";
+        // $transaction_info = "Thanh toán vé máy bay";
+        // $order_code       = "127";
+        // $amount           = $total;
+        // $customer_mobile  = $customer_phone;
+        // $websiteid        = 637;
+        // $secret_key       = "NguyenThanhTrung68";
+        // $vtcpay_url       = "http://sandbox1.vtcebank.vn/pay.vtc.vn/gate/checkout.html";
+
         $return_url       = getBaseUrl()."/ket-qua-thanh-toan.php";
-        $receiver         = "0983666999"; //"0904128163";
+        $receiver         = "0904128163";
         $transaction_info = "Thanh toán vé máy bay";
-        $order_code       = "127";//strtotime("now");
+        $order_code       = strtotime("now");
         $amount           = $total;
         $customer_mobile  = $customer_phone;
-        $websiteid        = 637; //1935;
-        $secret_key       = "NguyenThanhTrung68";//"BaoTam!@#$%^&*()1234567890";
-        $vtcpay_url       = "http://sandbox1.vtcebank.vn/pay.vtc.vn/gate/checkout.html";
-        // $vtcpay_url       = "https://pay.vtc.vn/cong-thanh-toan/checkout.html";
+        $websiteid        = 1935;
+        $secret_key       = "BaoTam!@#$%^&*()1234567890";
+        $vtcpay_url       = "https://pay.vtc.vn/cong-thanh-toan/checkout.html";
         $url              = $libpayvtc->buildCheckoutUrl($return_url, $receiver, $transaction_info, $order_code, $amount, $customer_mobile, $websiteid, $secret_key, $vtcpay_url, '');
                             //($return_url,  $receiver, $transaction_info, $order_code, $amount,$customer_mobile,$websiteid,$secret_key,$vtcpay_url,$param_extend)                  
         $url = urldecode($url);
@@ -167,9 +176,6 @@ $aMsgInvalid = [
 ];
 
 ?>
-
-
-
 
 <?php include_once "header.php";?>
 
