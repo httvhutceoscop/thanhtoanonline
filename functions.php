@@ -193,6 +193,9 @@ function sendEmail($orderNumber, $fullName, $email, $phone, $amount, $paymentMet
         <b>Cám ơn Quý khách đã sử dụng dịch vụ của Bảo Tâm Travel!</b><br>
         <i>Thank you for using Bao Tam services!</i>
     </div>';
+    $message .= '<div>
+        <font color="#cc0000" size="4" face="times new roman, serif">*<u>&nbsp;Lưu ý:</u>&nbsp;Sau khi nhận được thông báo này đề nghị quý khách liên hệ lại với số 04.6260.1133 hoặc 096.270.1133 để xác nhận lại thông tin thanh toán và đặt dịch vụ.&nbsp;</font>
+    </div>';
     $message .= '</div>';
     $message .= '</body></htm>';
     

@@ -52,14 +52,14 @@
 
     <div id="menu-header" class="standar-wrap clearfix">
         <a href="<?php echo getBaseUrl();?>" title="Thanh toán vé máy bay" id="main-logo">
-            <img id="img-logo" src="images/logo-san-ve-may-bay.png" alt="Săn vé máy bay giá rẻ" accesskey="">
+            <img id="img-logo" src="images/logo-baotam.png" alt="Săn vé máy bay giá rẻ" accesskey="">
         </a>
 
         <ul id="main-menu">
             <li id="hotline-dat-ve">
                 <p class="txt">Hỗ Trợ Thanh Toán</p>
                 <p class="txt2">Hỗ Trợ</p>
-                <p>08 6274 1999</p>
+                <p>096 270 1133</p>
             </li>
         </ul><!--main-menu-->
         <a href="https://thanhtoan.sanvemaybay.vn/#" id="colslapMenu" data-toggle="collapse"

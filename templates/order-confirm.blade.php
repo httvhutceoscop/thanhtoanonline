@@ -9,7 +9,7 @@
             font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
             font-size: 100%;
             line-height: 1.6;
-        }        
+        }
     </style>
 </head>
 <body bgcolor="#f6f6f6">

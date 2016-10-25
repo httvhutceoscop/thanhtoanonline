@@ -3,50 +3,31 @@
 
     <div id="content_transfer">
         <p id="bank-note">
-            Để booker kiểm tra và xuất vé trong thời gian sớm nhất quý khách vui lòng: <br>
-            - Nếu chuyển khoản qua Internet Banking quý khách vui lòng ghi <span class="bold red">Mã Đơn Hàng</span>
-            hoặc <span class="bold red">Số điện thoại</span> liên lạc vào nội dung thanh toán.
-            <br>
-            - Nếu chuyển khoản qua ATM, sau khi chuyển khoản quý khách vui lòng gọi điện thoại thông báo cho chúng
-            tôi.
-            <br>
-            - Gọi xác nhận thanh toán ngay sau khi chuyển khoản thành công.
-
+            Để tránh sai sót, đề nghị hành khách kiểm tra kĩ lại thông tin vé. <br>
+            Nếu quý khách phát hiện ra sai sót gì thì vui lòng thông báo lại ngay cho phòng vé, trước khi chuyển tiền thanh toán. <br>
+            Sau khi, vé đã xuất, phòng vé sẽ không chịu trách nhiệm về mọi sai sót phát sinh ( nếu có ).
+        </p>
+        <p class="bank-note">
+            Quý khách vui lòng xem thông tin hướng dẫn trong các link sau: <br>
+                - Hướng dẫn thanh toán - Quy định về hành lý <br>
+                - Chính sách hoàn, đổi vé - Các loại giấy tờ đi máy bay <br>
+            Vui lòng chọn tài khoản ngân hàng mà Quý khách có thể chuyển khoản một cách tiện lợi nhất.
+        </p>
+        <p class="bank-note">
+            <u><strong>Lưu ý khi chuyển khoản:</strong></u> <br>
+            Khi chuyển khoản, quý khách vui lòng nhập nội dung chuyển khoản là: <br>
+            "Mã số đơn hàng (viết tắt là <span class="bold red">MDH 102834</span> ) + Tên khách hoặc tên người đặt vé hoặc số điện thoại đặt vé + Noi dung thanh toan" <br>
+            VD: <br>
+            "MDH 102834 , Dao Huy Binh , TT ve may bay " <br>
+            "MDH 102834 , Dao Huy Binh TT them hanh ly ky gui " <br>
+            "MDH 102834 , Dao Huy Binh, TT phi doi ten, dich vu khac " <br>
+            Nếu không ghi được nội dung đề nghị hành khách chụp lại phiếu chuyển tiền và gửi lại phòng vé. Ðể việc thanh toán được chính xác. <br><br>
+            Xin cảm ơn quý khách!
         </p>
         <h5 class="partTitle">I. TÀI KHOẢN <span class="red">CÁ NHÂN</span></h5>
         <div id="bank-account-person">
             <table class="tbl_bank">
                 <tbody>
-                <tr class="tr-bank">
-                    <td class="bank-logo">
-                        <img alt="" src="images/lg_scb.jpg">
-                    </td>
-                    <td class="td-bank-detail">
-                        <table class="tbl-bank-detail">
-                            <tbody>
-                            <tr class="bank-name">
-                                <td colspan="2">
-                                    Ngân hàng TMCP Sài Gòn Thương Tín - Sacombank
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="bank-label">Tên tài khoản :</td>
-                                <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">0600 9880 7570</td>
-                            </tr>
-                            <tr>
-                                <td class="bank-label">Chi nhánh :</td>
-                                <td class="bank-branch">Tân Bình</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
                 <tr class="tr-bank">
                     <td class="bank-logo"><img alt="" src="images/lg-vcb.png"></td>
                     <td class="td-bank-detail">
@@ -60,44 +41,16 @@
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
+                                    ĐÀO HUY BÌNH
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">0421 000 459 049</td>
+                                <td class="bank-number">0541000216242</td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Chi nhánh :</td>
-                                <td class="bank-branch">Hồ Chí Minh</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-                <tr class="tr-bank">
-                    <td class="bank-logo"><img alt="" src="images/lg_tech.jpg"></td>
-                    <td class="td-bank-detail">
-                        <table class="tbl-bank-detail">
-                            <tbody>
-                            <tr class="bank-name">
-                                <td colspan="2">
-                                    Ngân hàng TMCP Kỹ Thương Việt Nam - Techcombank
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="bank-label">Tên tài khoản :</td>
-                                <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">1902 9010 844 011</td>
-                            </tr>
-                            <tr>
-                                <td class="bank-label">Chi nhánh :</td>
-                                <td class="bank-branch">PGD Bàu Cát</td>
+                                <td class="bank-branch">Chương Dương, Hà Nội</td>
                             </tr>
                             </tbody>
                         </table>
@@ -105,28 +58,28 @@
                 </tr>
 
                 <tr class="tr-bank">
-                    <td class="bank-logo"><img alt="" src="images/logo_acb.jpg"></td>
+                    <td class="bank-logo"><img alt="" src="images/lg_tech.jpg"></td>
                     <td class="td-bank-detail">
                         <table class="tbl-bank-detail">
                             <tbody>
                             <tr class="bank-name">
                                 <td colspan="2">
-                                    Ngân hàng TMCP Á Châu - ACB
+                                    Ngân hàng TMCP Kỹ thương Việt Nam - Teckcombank
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
+                                    ĐÀO HUY BÌNH
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">194 495 869</td>
+                                <td class="bank-number">19026930046019</td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Chi nhánh :</td>
-                                <td class="bank-branch">Lũy Bán Bích</td>
+                                <td class="bank-branch">Hoàng Quốc Việt</td>
                             </tr>
                             </tbody>
                         </table>
@@ -146,16 +99,16 @@
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
+                                    ĐÀO HUY BÌNH
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">711AC 8192033</td>
+                                <td class="bank-number">711A13176622</td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Chi nhánh :</td>
-                                <td class="bank-branch">PGD Bàu Cát</td>
+                                <td class="bank-branch">Hoàng Quốc Việt</td>
                             </tr>
                             </tbody>
                         </table>
@@ -175,16 +128,16 @@
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
+                                    ĐÀO HUY BÌNH
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">6460 205 482 957</td>
+                                <td class="bank-number">1400205360456</td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Chi nhánh :</td>
-                                <td class="bank-branch">Tân Phú</td>
+                                <td class="bank-branch">Láng Hạ</td>
                             </tr>
                             </tbody>
                         </table>
@@ -204,17 +157,18 @@
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
+                                    ĐÀO HUY BÌNH
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">1351 0000 689 100</td>
+                                <td class="bank-number">12610000165589</td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Chi nhánh :</td>
-                                <td class="bank-branch">Gia Định</td>
+                                <td class="bank-branch">Ba Đình</td>
                             </tr>
+
                             </tbody>
                         </table>
                     </td>
@@ -233,12 +187,16 @@
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
+                                    ĐÀO HUY BÌNH
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">0108 855 360</td>
+                                <td class="bank-number">0102676517</td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Chi nhánh :</td>
+                                <td class="bank-branch">Phòng giao dịch Kim Liên, Hà Nội</td>
                             </tr>
                             </tbody>
                         </table>
@@ -258,12 +216,16 @@
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
+                                    ĐÀO HUY BÌNH
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">055 7040 7000 4147</td>
+                                <td class="bank-number">222704070000067</td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Chi nhánh :</td>
+                                <td class="bank-branch">PGD Điện Biên Phủ, Hải Dương</td>
                             </tr>
                             </tbody>
                         </table>
@@ -283,12 +245,74 @@
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    HUỲNH NGỌC ĐAN THỦY
+                                    ĐÀO HUY BÌNH
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">1000 103 308 007</td>
+                                <td class="bank-number">0680101992005</td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Chi nhánh :</td>
+                                <td class="bank-branch">Thăng Long</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr class="tr-bank">
+                    <td class="bank-logo"><img alt="" src="images/VIB.jpg"></td>
+                    <td class="td-bank-detail">
+                        <table class="tbl-bank-detail">
+                            <tbody>
+                            <tr class="bank-name">
+                                <td colspan="2">
+                                    Ngân hàng VIB Bank
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Tên tài khoản :</td>
+                                <td class="com-name">
+                                    ĐÀO HUY BÌNH
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Số tài khoản :</td>
+                                <td class="bank-number">066704060041110</td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Chi nhánh :</td>
+                                <td class="bank-branch">Minh Khai</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr class="tr-bank">
+                    <td class="bank-logo"><img alt="" src="images/VPBank.jpg"></td>
+                    <td class="td-bank-detail">
+                        <table class="tbl-bank-detail">
+                            <tbody>
+                            <tr class="bank-name">
+                                <td colspan="2">
+                                    Ngân hàng Việt Nam Thịnh vượng - VP Bank
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Tên tài khoản :</td>
+                                <td class="com-name">
+                                    ĐÀO HUY BÌNH
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Số tài khoản :</td>
+                                <td class="bank-number">102295048</td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Chi nhánh :</td>
+                                <td class="bank-branch">PGD Lạc Trung</td>
                             </tr>
                             </tbody>
                         </table>
@@ -307,29 +331,59 @@
                 <tbody>
                 <tr class="tr-bank">
                     <td class="bank-logo">
-                        <img alt="" src="images/lg-vcb.png">
+                        <img alt="" src="images/lg_vietinbank.jpg">
                     </td>
                     <td class="td-bank-detail">
                         <table class="tbl-bank-detail">
                             <tbody>
                             <tr class="bank-name">
                                 <td colspan="2">
-                                    Ngân hàng TMCP Ngoại Thương Việt Nam - Vietcombank
+                                    NGÂN HÀNG VIETIN BANK
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Tên tài khoản :</td>
                                 <td class="com-name">
-                                    CÔNG TY TNHH DT-TM-DV LIÊN VIỆT
+                                    CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ VÀ DU LỊCH BẢO TÂM
                                 </td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Số tài khoản :</td>
-                                <td class="bank-number">0441 000 671 342</td>
+                                <td class="bank-number">102010001939684</td>
                             </tr>
                             <tr>
                                 <td class="bank-label">Chi nhánh :</td>
-                                <td class="bank-branch">Tân Bình</td>
+                                <td class="bank-branch">Hai Bà Trưng</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="tr-bank">
+                    <td class="bank-logo">
+                        <img alt="" src="images/lg_hdbank.jpg">
+                    </td>
+                    <td class="td-bank-detail">
+                        <table class="tbl-bank-detail">
+                            <tbody>
+                            <tr class="bank-name">
+                                <td colspan="2">
+                                    NGÂN HÀNG HD BANK
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Tên tài khoản :</td>
+                                <td class="com-name">
+                                    CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ VÀ DU LỊCH BẢO TÂM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Số tài khoản :</td>
+                                <td class="bank-number">198704070000344</td>
+                            </tr>
+                            <tr>
+                                <td class="bank-label">Chi nhánh :</td>
+                                <td class="bank-branch">Hồ Gươm – PGD Lạc Trung</td>
                             </tr>
                             </tbody>
                         </table>

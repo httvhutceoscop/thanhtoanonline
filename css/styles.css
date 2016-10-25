@@ -54,6 +54,7 @@ a {text-decoration: none;}
 }
 #img-logo {
     vertical-align: middle;
+    max-width: 255px;
 }
 #main-menu {
     float: right;
